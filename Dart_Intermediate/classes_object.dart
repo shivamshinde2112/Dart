@@ -40,4 +40,23 @@ void main() {
 }
 */
 
+//Static variable
 
+class Demo {
+  int x = 10;
+  static int y = 20;
+  void printData() {
+    print(x);
+    print(y);
+  }
+}
+
+void main() {
+  Demo obj = new Demo();
+  obj.printData();
+  print(obj.x);
+  print(Demo.y);
+  obj.x = 23;
+  Demo.y = 68;
+  obj.printData();
+}
